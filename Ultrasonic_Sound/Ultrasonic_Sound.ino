@@ -36,14 +36,16 @@ duration = pulseIn(echoPin, HIGH);
 distance= duration*0.034/2;
 
 safetyDistance = distance;
-if (safetyDistance <= 15){
+if (safetyDistance <= 30){
   digitalWrite(buzzer, HIGH);
   digitalWrite(ledPin, HIGH);
 }
-else{
+  else{
   digitalWrite(buzzer, LOW);
   digitalWrite(ledPin, LOW);
 }
+
+
 
 // Prints the distance on the Serial Monitor
 Serial.print("Distance: ");
